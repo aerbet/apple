@@ -20,6 +20,17 @@ const HowItWorks = () => {
       ease: 'power2.inOut'
     })
     
+    gsap.to('#honkaiVid', {
+      scrollTrigger: {
+        trigger: '#honkaiVid',
+        toggleActions: 'play pause reverse restart',
+        start: '-10% bottom',
+      },
+      onComplete: () => {
+        videoRef.current.play();
+      }
+    })
+    
     animateWithGsap('.g_fadeIn', {
       opacity: 1,
       y: 0,
@@ -55,7 +66,7 @@ const HowItWorks = () => {
               />
             </div>
             <div className="hiw-video">
-              <video className="pointer-events-none"
+              <video id="honkaiVid" className="pointer-events-none"
                      playsInline
                      preload="none"
                      muted
@@ -72,7 +83,7 @@ const HowItWorks = () => {
         
         <div className="hiw-text-container">
           <div className="flex flex-1 justify-center flex-col">
-            <p className="hiw-text g_fadeIn">
+            <p className="hiw-text g_fadeIn mb-6">
               A17 Pro is an entirely new class of iPhone chip that delivers our {' '}
               <span className="text-white">
                 best graphic performance by far
