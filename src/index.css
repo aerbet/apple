@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-height {
+  @apply h-[calc(100vh-60px)]
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +26,7 @@ canvas {
   touch-action: none;
 }
 
-.scrim-max-width {
+.screen-max-width {
   margin-inline-start: auto;
   margin-inline-end: auto;
   position: relative;
@@ -30,12 +34,9 @@ canvas {
 }
 
 @layer utilities {
+
   .flex-center {
     @apply flex items-center justify-center
-  }
-
-  .nav-height {
-    @apply h-[calc(100vh-60px)]
   }
 
   .btn {
