@@ -26,6 +26,10 @@ canvas {
   touch-action: none;
 }
 
+#erbl {
+  max-width: 1340px;
+}
+
 .screen-max-width {
   margin-inline-start: auto;
   margin-inline-end: auto;
